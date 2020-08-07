@@ -1,7 +1,7 @@
 {
   "extends": [
-    "xo-nextjs",
     "airbnb",
+    "xo-nextjs",
     "prettier"
   ],
   "plugins": ["prettier"],
