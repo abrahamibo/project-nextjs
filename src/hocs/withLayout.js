@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import LayoutDefault from "../view/_layouts/LayoutDefault/LayoutDefault";
+import LayoutDefault from "../layouts/LayoutDefault/LayoutDefault";
 
 const withLayout = (ComponentToWrap) => {
     class LayoutComponent extends Component {

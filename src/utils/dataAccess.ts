@@ -14,11 +14,17 @@ interface Violation {
 
 export const fetch = (id: string, init: RequestInit = {}) => {
   if ('undefined' === typeof init.headers) {
-    init.headers = {};
+    init.headers = {
+      'Access-Control-Allow-Origin':'*'
+    };
   }
 
   if (!init.headers.hasOwnProperty('Accept')) {
     init.headers = {...init.headers, 'Accept': MIME_TYPE};
+  }
+
+  if (!init.headers.hasOwnProperty("Access-Control-Allow-Origin")) {
+    init.headers = { ...init.headers, 'Access-Control-Allow-Origin': '*' };
   }
 
   if (
@@ -54,7 +60,6 @@ export const fetch = (id: string, init: RequestInit = {}) => {
 }
 
 export const normalize = (data: any) => {
-  console.log(data);
   if (has(data, 'hydra:member')) {
     // Normalize items in collections
     data['hydra:member'] = data['hydra:member'].map((item: any) => normalize(item));
