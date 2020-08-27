@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "free-b2b-core": "^1.0.20",
+    "free-b2b-core-repload": "^1.0.3",
+    "mypackageibo": "^1.0.2",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
